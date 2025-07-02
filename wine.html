@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Ferros Portfolio - Wine Paintings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #000;
+            background-color: #fff0e5;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+        }
+
+        .left-column {
+            width: 20%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .right-column {
+            width: 80%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .exhibition-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: #5c2c0a;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.2rem;
+            padding: 5px 0;
+            transition: color 0.3s;
+        }
+
+        .menu a:hover {
+            color: gray;
+        }
+
+        .social {
+            display: flex;
+            gap: 20px;
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+
+        .social a {
+            color: black;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social a:hover {
+            color: gray;
+        }
+
+        .painting-row {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .painting-text {
+            flex: 1;
+        }
+
+        .painting-image {
+            flex: 1;
+        }
+
+        .painting-image img, .full-width-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .painting-title {
+            font-size: 1.8rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            color: #5c2c0a;
+            margin-bottom: 10px;
+        }
+
+        .painting-description {
+            font-size: 1.3rem;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .exhibition-intro {
+            margin-bottom: 30px;
+        }
+
+        .exhibition-text {
+            font-size: 1.3rem;
+            line-height: 1.6;
+        }
+
+        .full-width-image {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .image-right .painting-row {
+            flex-direction: row-reverse;
+        }
+    </style>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZS079TDXTE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZS079TDXTE');
+</script>
+
+<body>
+    <div class="container">
+        <div class="left-column">
+            <div>
+                <h1>pablo ferros</h1>
+                <div class="menu">
+                    <a href="index.html">home</a>
+                    <a href="wine.html">wine</a>
+                    <a href="datadesigns.html">data</a>
+                    <a href="drawings.html">drawings</a>
+                    <a href="illustrations.html">illustrations</a>
+                    <a href="about.html">about</a>
+                </div>
+                <div class="social">
+                    <a href="https://instagram.com/studioferros" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="mailto:pablofer.reque@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="full-width-image">
+                <img src="1.JPG" alt="Wine Exhibition Main Image">
+            </div>
+            
+            <div class="exhibition-intro">
+                <h2 class="exhibition-title">Nights of Wine and Painting</h2>
+                <p class="exhibition-text">
+                    This collection explores the end of the bottle, the remainings of last night and a new bottle that I opened to release my mind from worries and the usual trapped instant thoughts that push me away of my painting table, an old sewing machine I bought second-hand.
+                </p>
+            </div>
+
+            <div style="height: 100vh;">
+                <div class="painting-row" style="align-items: flex-start;">
+                    <div class="painting-image" style="flex: 1;">
+                        <img src="2.JPG" alt="Wine Painting 2">
+                    </div>
+                    <div class="painting-text" style="flex: 1; position: sticky; top: 100px; align-self: flex-start;">
+                        <h3 class="painting-title">The Harvest</h3>
+                        <p class="painting-description">
+                            These paintings collect every thought that came to my mind while tasting wine, every romantic side of my life. From a great meal to a sad poem, a memory from my childhood, a painful truth in our planet.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="height: 100vh;">
+                <div class="painting-row image-right" style="align-items: flex-start;">
+                    <div class="painting-image" style="flex: 1;">
+                        <img src="3.JPG" alt="Wine Painting 3">
+                    </div>
+                    <div class="painting-text" style="flex: 1; position: sticky; top: 100px; align-self: flex-start;">
+                        <h3 class="painting-title">Fermentation Dance</h3>
+                        <p class="painting-description">
+                            A metaphorical representation of the fermentation process, where sugars transform into alcohol. 
+                            The design of each piece that composes this collection has gone through fermantation one year at least. During that time the idea was built, so I had weeks and months to think about the content, before I detailed final touches. The top painting shows the draft wine idea, the bottom one defines art through waiting for the taste to be the right one.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="full-width-image">
+                <img src="4.JPG" alt="Wine Painting 4">
+            </div>
+            
+            <div class="painting-row" style="margin-top: -20px;margin-bottom: 80px;">
+                <div class="painting-text" style="width: 100%;">
+                    <h3 class="painting-title">Aging in Silence</h3>
+                    <p class="painting-description">
+                        Depicting wine barrels in a cool cellar, this work explores the concept of patience and slow maturation. 
+                        The textures of every painting is the same, the meaning comes from far away experiences. My grandmas hall, always dark and mysterious to me. One of my favourite spicy dishes, trying mapo tofu for the first time. Federico García Lorca portrait and drawing, the time I read Introduction to Death. The Korean cannal that will forever be in my heart. A warm sip of glögg, an almond. My old appartment stairs window. The sad, slow and coward pace of my decisions. The Mediterranean Sea.
+                    </p>
+                </div>
+            </div>
+
+            <div style="height: 100vh;">
+                <div class="painting-row" style="align-items: flex-start;">
+                    <div class="painting-image" style="flex: 1;">
+                        <img src="5.JPG" alt="Wine Painting 5">
+                    </div>
+                    <div class="painting-text" style="flex: 1; position: sticky; top: 100px; align-self: flex-start;">
+                        <h3 class="painting-title">Vineyard Dreams</h3>
+                        <p class="painting-description">
+                            I never walked around vineyards, I never tried a bitter wine with the sunset at the end of these fields. But every Summer we sat under the grapes on my grandmother backyard, waiting for them to mature. Lately I lost myself, and I found two empty chairs close to the vine. Wine for one.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="painting-row" style="margin-top: -20px;">
+                <div class="painting-text" style="width: 100%;">
+                    <h3 class="painting-title">My winery</h3>
+                    <p class="painting-description">
+                        Exhibition information coming soon.
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>
