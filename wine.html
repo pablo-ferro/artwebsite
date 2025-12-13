@@ -17,15 +17,48 @@
       overflow-x: hidden;
     }
 
+    * {
+  box-sizing: border-box; /* Apply to all elements */
+  max-width: 100%; /* Prevent overflow */
+}
+
+img {
+  max-width: 100%; /* Images never exceed container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+    .container {
+      display: flex;
+      width: 100%;
+    }
+
+    .left-column {
+      width: 11%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: relative;
+    }
+
+    .right-column {
+      width: 81%;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+    }
+
     .left-progress-container {
-      position: fixed;
-      left: 200px;
-      top: 0;
-      height: 100vh;
+      width: 8%;
       display: flex;
       justify-content: center;
+      height: 100vh;
+      align-items: center;
       gap: 10px;
+      position: sticky;
+      top: 0;
       z-index: 9999;
+      padding: 20x 0;
     }
 
     .left-progress-bar {
@@ -36,11 +69,9 @@
     }
 
     .dot-track {
-      position: fixed;
-      top: 0;
+      position: relative;
       width: 20px;
       height: 100vh;
-      z-index: 9999;
       pointer-events: none;
     }
 
@@ -49,27 +80,6 @@
       background-color: white;
       border-radius: 50%;
       opacity: 0.9;
-    }
-
-    .container {
-      display: flex;
-      width: 100%;
-    }
-
-    .left-column {
-      width: 20%;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      position: relative;
-    }
-
-    .right-column {
-      width: 80%;
-      padding: 40px;
-      display: flex;
-      flex-direction: column;
     }
 
     .exhibition-title {
@@ -124,13 +134,13 @@
 
     .painting-row {
       display: flex;
-      gap: 30px;
-      margin-bottom: 20px;
+      gap: 10px;
+      margin-bottom: 10px;
       width: 100%;
     }
 
     .painting-text {
-      flex: 1;
+      flex: 2;
     }
 
     .painting-image {
@@ -141,8 +151,8 @@
       width: 100%;
       height: auto;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      border: 4px solid white;
+      box-shadow: 0 0px 0px rgba(0,0,0,0.3);
+      border: 0px solid white;
       object-fit: contain;
     }
 
@@ -159,6 +169,139 @@
       line-height: 1.5;
       color: white;
     }
+
+
+/* For narrow screens - stack vertically */
+@media (max-width: 900px) { /* Adjust this breakpoint as needed */
+  .painting-row {
+    flex-direction: column; /* Stack vertically */
+  }
+  
+  .painting-image, 
+  .painting-text {
+    width: 100% !important; /* Force full width */
+    flex: none !important; /* Remove flex sizing */
+  }
+  
+  /* Remove sticky positioning on mobile */
+  .painting-text[style*="position: sticky"] {
+    position: relative !important;
+    top: auto !important;
+  }
+  
+  /* Adjust the container heights */
+  div[style*="height: 70vh"], 
+  div[style*="height: 100vh"] {
+    height: auto !important;
+    min-height: auto !important;
+  }
+}
+
+/* For very small screens (phones) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack all columns */
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  
+  }
+  
+  .left-column,
+  .right-column {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box; /* Include padding in width */
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  
+  /* Fix the right column specifically */
+  .right-column {
+    padding: 20px 15px !important;
+    width: 100vw !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  /* Fix painting rows */
+  .painting-row {
+    flex-direction: column;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    gap: 20px;
+  }
+  
+  .painting-image,
+  .painting-text {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* Fix images overflowing */
+  .painting-image img,
+  .full-width-image img,
+  .image-gallery-4 img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block;
+  }
+  
+  /* Fix the 4-image gallery */
+  .image-gallery-4 {
+    flex-direction: column; /* Stack gallery images */
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 15px;
+  }
+  
+  .image-gallery-4 .gallery-item {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+/* Hide or adjust progress container for mobile */
+.left-progress-container {
+  display: none !important; /* Changed from position: relative */
+  /* Remove all other properties since it's hidden */
+}
+  
+  /* Adjust font sizes for mobile */
+  .exhibition-title {
+    font-size: 2.2rem !important;
+    line-height: 1.2;
+  }
+  
+  .painting-title {
+    font-size: 1.5rem !important;
+  }
+  
+  .painting-description,
+  .exhibition-text {
+    font-size: 1.1rem !important;
+    line-height: 1.5;
+  }
+  
+  /* Fix any inline width styles */
+  div[style*="width:"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Remove any horizontal margins */
+  * {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
 
     .exhibition-intro {
       margin-bottom: 30px;
@@ -205,7 +348,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      border: 4px solid white;
+      border: 0px solid white;
       border-radius: 8px;
     }
 
@@ -224,21 +367,39 @@
       opacity: 0;
       transform: translateX(-100%);
     }
+
+    /* Nuevo estilo para la galería de 4 imágenes */
+    .image-gallery-4 {
+      display: flex;
+      gap: 20px;
+      margin: 40px 0;
+      width: 100%;
+    }
+
+    .image-gallery-4 .gallery-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .image-gallery-4 img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0px 0px rgba(0,0,0,0.3);
+      border: 0px solid white;
+      object-fit: contain;
+    }
   </style>
 </head>
 <body>
-
-  <div class="left-progress-container">
-    <div class="left-progress-bar" id="vbar2"></div>
-    <div class="left-progress-bar" id="vbar3"></div>
-    <div class="left-progress-bar" id="vbar4"></div>
-    <div class="dot-track" id="dot-track1" style="left: 255px;"></div>
-    <div class="dot-track" id="dot-track2" style="left: 275px;"></div>
-    <div class="dot-track" id="dot-track3" style="left: 295px;"></div>
-    <div class="dot-track" id="dot-track4" style="left: 315px;"></div>
-  </div>
-
   <div class="container">
+    
+
+
+
+
+    <!-- LEFT COLUMN (15%) -->
     <div class="left-column">
       <div>
         <h1>pablo ferros</h1>
@@ -246,8 +407,8 @@
           <a href="index.html">home</a>
           <a href="wine.html">wine</a>
           <a href="digital.html">digital</a>
-          <a href="drawings.html">drawings</a>
           <a href="illustrations.html">illustrations</a>
+          <a href="drawings.html">drawings</a>
           <a href="about.html">about</a>
         </div>
         <div class="social">
@@ -256,7 +417,27 @@
         </div>
       </div>
     </div>
+    
 
+
+
+
+    <!-- PROGRESS CONTAINER (10%) -->
+    <div class="left-progress-container">
+      <!--<div class="left-progress-bar" id="vbar2"></div>
+      <div class="left-progress-bar" id="vbar3"></div>
+      <div class="left-progress-bar" id="vbar4"></div>
+      <div class="dot-track" id="dot-track1"></div>-->
+      <div class="dot-track" id="dot-track2"></div>
+      <div class="dot-track" id="dot-track3"></div>
+      <div class="dot-track" id="dot-track4"></div>
+    </div>
+    
+
+
+
+
+    <!-- RIGHT COLUMN (75%) -->
     <div class="right-column">
       <div class="full-width-image">
         <img src="wine/1.JPG" alt="Wine Exhibition Main Image" style="width: 100%; height: auto; object-fit: scale-down; max-height: 90vh; display: block; margin: auto;">
@@ -269,7 +450,7 @@
         </p>
       </div>
 
-      <div style="height: 100vh;">
+      <div style="height: 70vh;">
         <div class="painting-row" style="align-items: flex-start;">
           <div class="painting-image">
             <img src="wine/2.JPG" alt="Wine Painting 2">
@@ -283,7 +464,7 @@
         </div>
       </div>
 
-      <div style="height: 100vh;">
+      <div style="height: 70vh;">
         <div class="painting-row image-right" style="align-items: flex-start;">
           <div class="painting-image">
             <img src="wine/3.JPG" alt="Wine Painting 3">
@@ -298,7 +479,26 @@
         </div>
       </div>
 
-        <div class="painting-row" style="margin-top: -20px;margin-bottom: 80px;">
+      <!-- GALERÍA DE 4 IMÁGENES AÑADIDA AQUÍ -->
+      <div class="image-gallery-4">
+        <div class="gallery-item">
+          <img src="wine/7.JPG" alt="Wine Painting 7">
+        </div>
+
+        <div class="gallery-item">
+          <img src="wine/9.JPG" alt="Wine Painting 9">
+        </div>
+
+        <div class="gallery-item">
+          <img src="wine/8.JPG" alt="Wine Painting 8">
+        </div>
+
+        <div class="gallery-item">
+          <img src="wine/10.JPG" alt="Wine Painting 10">
+        </div>
+      </div>
+
+      <div class="painting-row" style="margin-top: -20px;margin-bottom: 10px;">
                 <div class="painting-text" style="width: 100%;">
                     <h3 class="painting-title">Aging in Silence</h3>
                     <p class="painting-description">
@@ -309,20 +509,25 @@
             </div>
 
 
-
+<!--
       <div class="storytelling-section">
         <div class="storytelling-wrapper">
           <img src="wine/4.JPG" class="active" id="image4" alt="Wine Painting 4">
           <img src="wine/6.JPG" class="next" id="image6" alt="Wine Painting 6">
         </div>
       </div>
+-->
 
-      <div style="height: 100vh;">
+
+
+      <div style="height: 70vh;">
         <div class="painting-row" style="align-items: flex-start;">
           <div class="painting-image">
             <img src="wine/5.JPG" alt="Wine Painting 5">
           </div>
-          <div class="painting-text" style="position: sticky; top: 100px;">
+
+
+          <div class="painting-text" style="position: sticky; top: 0px;">
             <h3 class="painting-title">Vineyard Dreams</h3>
             <p class="painting-description">
                             I never walked around vineyards, I never tried a bitter wine with the sunset at the end of these fields. But every Summer we sat under the grapes on my grandmother backyard, waiting for them to mature. Lately I lost myself, and I found two empty chairs close to the vine. Wine for one.
@@ -330,7 +535,7 @@
           </div>
         </div>
       </div>
-       <div class="painting-row" style="margin-top: -20px;">
+       <div class="painting-row" style="margin-top: 0px;">
                 <div class="painting-text" style="width: 100%;">
                     <h3 class="painting-title">My winery</h3>
                     <p class="painting-description">
@@ -339,19 +544,36 @@
                 </div>
             </div>
 
+
+        <div class="painting-row" style="align-items: flex-start;">
+          <div class="painting-image">
+          <img src="wine/4.JPG" class="active" id="image4" alt="Wine Painting 4">
+        </div>
+      </div>
+
     </div>
   </div>
 
+
+
+
+
+
+
+
+
   <script>
+
+
+
     const dotTracks = [
-  document.getElementById('dot-track1'),
   document.getElementById('dot-track2'),
   document.getElementById('dot-track3'),
   document.getElementById('dot-track4')
 ];
 
 // Each offset adds or subtracts 0–5% to scrollPercent for that track
-const scrollOffsets = [-9, 0, 2, 8]; // You can customize these as needed
+const scrollOffsets = [2, 9, 18]; // You can customize these as needed
 
 function updateDots(scrollPercent) {
   dotTracks.forEach((track, index) => {
@@ -386,12 +608,14 @@ function updateDots(scrollPercent) {
       const scrollPercent = (scrollTop / docHeight) * 100;
 
       /*document.getElementById('vbar2').style.height = scrollPercent + '%';
-      document.getElementById('vbar3').style.height = (scrollPercent - 4) + '%';*/
-      document.getElementById('vbar4').style.height = (scrollPercent - 10) + '%';
+      document.getElementById('vbar3').style.height = (scrollPercent - 4) + '%';
+      document.getElementById('vbar4').style.height = (scrollPercent - 10) + '%';*/
 
       updateDots(scrollPercent);
     });
 
+
+/*
     const storytelling = document.querySelector('.storytelling-section');
     const img4 = document.getElementById('image4');
     const img6 = document.getElementById('image6');
@@ -410,7 +634,10 @@ function updateDots(scrollPercent) {
         img6.classList.remove('active');
         img6.classList.add('next');
       }
-    });
+    });*/
+
+
+
   </script>
 </body>
 </html>
