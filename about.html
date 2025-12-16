@@ -46,6 +46,15 @@
             margin-bottom: 20px;
         }
 
+        .text-section .item {
+    margin-bottom: 0.6em; /* Space between items */
+    line-height: 1.6;
+}
+
+.text-section .intro {
+    margin-bottom: 2em;
+}
+
         .menu a {
             text-decoration: none;
             color: black;
@@ -88,6 +97,148 @@
             font-size: 1.1rem;
             line-height: 1.6;
         }
+
+
+
+/* Responsive design for About page */
+
+/* Medium screens (tablets) 
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .left-column,
+  .right-column {
+    width: 100% !important;
+  }
+  
+  .left-column {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .right-column {
+    padding: 15px;
+    overflow-y: visible;
+  }
+}*/
+
+/* Small screens (phones) */
+@media (max-width: 1200px) {
+  body {
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .container {
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .left-column {
+    width: 100% !important;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    background-color: #fff0e5;
+    z-index: 100;
+    border-bottom: 0px solid #ddd;
+  }
+  
+  .right-column {
+    width: 100% !important;
+    padding: 15px;
+    overflow-y: visible;
+  }
+  
+  h1 {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.5rem;
+  }
+  
+  .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .menu a {
+    font-size: 1rem;
+    padding: 5px;
+  }
+  
+  .social {
+    gap: 15px;
+    font-size: 1.2rem;
+    margin-top: 15px;
+  }
+  
+  .text-section {
+    font-size: 1rem !important;
+    line-height: 1.5;
+    padding: 10px;
+  }
+  
+  /* Make sure text doesn't overflow */
+  .right-column {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .left-column {
+    padding: 10px;
+  }
+  
+  .right-column {
+    padding: 10px;
+  }
+  
+  .menu {
+    gap: 10px;
+  }
+  
+  .menu a {
+    font-size: 0.9rem;
+  }
+  
+  .text-section {
+    font-size: 0.95rem !important;
+    padding: 5px;
+  }
+}
+
+/* Ensure images are responsive */
+.right-column img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* General responsive text */
+.text-section {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Prevent horizontal scroll on mobile */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+  
+  * {
+    max-width: 100%;
+  }
+}
+
+
+
+
     </style>
 </head>
 
@@ -127,22 +278,29 @@
         </div>
         <div class="right-column">
             <div class="text-section">
-                Life, then location and finally doing what, exploring as many new areas as possible.
+               <div class="text-section">
+    <p class="intro">I am Pablo, living in Stockholm, and you can get to know me more through what I love, so that is why I share with you:</p>
+    
+    <div class="item">- A song: Me va a costar by Kevin Kaarl</div>
+    <div class="item">- A soundtrack: Un suspiro acompasado by Robe</div>
+    <div class="item">- A film: Mickey 17 by Bong Joon Ho</div>
+    <div class="item">- A book: The Midnight Library by Matt Haig</div>
+    <div class="item">- A place: Copenhaguen, Denmark</div>
+    <div class="item">- A food: pan con tomate, sal, aceite y jamón</div>
+    <div class="item">- A time: 1 AM</div>
+    <div class="item">- A wish: to appreciate the sun</div>
+    <div class="item">- A regret: to stay in silence</div>
+    <div class="item">- A plant: all</div>
+    <div class="item">- A painting: L'Énigme de Guillaume Tell</div>
+    <div class="item">- A poet: Gloria Fuertes</div>
+    <div class="item">- A language: italian</div>
+    <div class="item">- A fear: darkness</div>
+    <div class="item">- A comedian: Chiquito de la Calzada</div>
+    <div class="item">- A performer: Benedict Cumberbatch</div>
+    <div class="item">- A finale: drifting, cloud of smoke, wild, wrecked.</div>
+</div>
             </div>
-            <img src="aboutme/About me.png" alt="About me">
-            <div class="text-section">
-                A pilgrim’s life is full of lessons: patience, perseverance, and an understanding that a profound journey is defined at varied paces, with occasional obstacles like rocks in the shoes and mixed with breathtaking sunsets. I have walked the path to Santiago de Compostela in Spain twice, but different routes: Camino Portugués and Camino Sanabrés.
-            </div>
-            <img src="aboutme/About me1.png" alt="About me 1">
-            <div class="text-section">
-                When you run a marathon, you’ve essentially covered several of them through training; the only distinction lies in the moment of truth when self-doubt creeps in. Post-race, you may question whether you’d want to endure it again. I’ve completed numerous half marathons, but these three tracks are the most memorable ones and linger vividly in my memory.
-            </div>
-            <img src="aboutme/About me2.png" alt="About me 2">
-            <div class="text-section">
-                I crafted a map to visually encapsulate the extent of my travels throughout life. Each route, a line connecting an origin and destination, holds profound significance. In the intervals, as I attempt to rest or navigate through turbulence-induced jitters, I find solace in my favorite rock album. Closing my eyes, I transport myself to the concert—jumping, singing, and reveling in the sheer joy of the moment. It’s a coping mechanism that, at times, works like a charm.
-            </div>
-            <img src="aboutme/About me3.png" alt="About me 3">
-            <!-- Add more images as needed -->
+
         </div>
     </div>
 </body>

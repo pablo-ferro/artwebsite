@@ -84,6 +84,126 @@
             height: auto;
             border-radius: 8px;
         }
+
+
+
+
+        /* Responsive design for Sketches page */
+
+/* Tablet screens */
+@media (max-width: 1200px) {
+  .right-column {
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 columns on tablet */
+    gap: 15px !important;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .container {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .left-column {
+    width: 100%;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 100;
+    border-bottom: 0px solid #ddd;
+  }
+  
+  .right-column {
+    width: 100%;
+    padding: 0 15px; /* Only horizontal padding */
+    overflow-y: visible;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  
+  .right-column img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 15px 0;
+    padding: 0;
+    display: block;
+    /* Remove box-sizing from images - let them be content-box */
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .menu a {
+    font-size: 1rem;
+    padding: 5px;
+  }
+  
+  .social {
+    gap: 15px;
+    font-size: 1.2rem;
+    margin-top: 15px;
+  }
+  
+  /* Prevent horizontal scroll */
+  html {
+    overflow-x: hidden;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .left-column {
+    padding: 10px;
+  }
+  
+  .right-column {
+    padding: 0 10px; /* Only horizontal padding */
+  }
+  
+  .right-column img {
+    margin-bottom: 10px;
+  }
+  
+  .menu {
+    gap: 10px;
+  }
+  
+  .menu a {
+    font-size: 0.9rem;
+  }
+}
+
+/* Ensure images are always responsive */
+.right-column img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
     </style>
 </head>
 
@@ -135,6 +255,9 @@
             <img src="sketches/Sketch11.png" alt="Sketch 11">
             <img src="sketches/Sketch12.png" alt="Sketch 12">
             <img src="sketches/Sketch13.png" alt="Sketch 13">
+            <img src="sketches/Sketch14.png" alt="Sketch 14">
+            <img src="sketches/Sketch15.png" alt="Sketch 15">
+            <img src="sketches/Sketch16.png" alt="Sketch 16">
             <!-- Add more images as needed -->
         </div>
     </div>

@@ -171,34 +171,35 @@ img {
     }
 
 
-/* For narrow screens - stack vertically */
-@media (max-width: 900px) { /* Adjust this breakpoint as needed */
+/* For narrow screens - stack vertically 
+@media (max-width: 1200px) { /* Adjust this breakpoint as needed 
   .painting-row {
-    flex-direction: column; /* Stack vertically */
+    flex-direction: column; /* Stack vertically 
   }
   
   .painting-image, 
   .painting-text {
-    width: 100% !important; /* Force full width */
-    flex: none !important; /* Remove flex sizing */
+    width: 100% !important; /* Force full width 
+    flex: none !important; /* Remove flex sizing 
   }
   
-  /* Remove sticky positioning on mobile */
+  /* Remove sticky positioning on mobile 
   .painting-text[style*="position: sticky"] {
     position: relative !important;
     top: auto !important;
   }
   
-  /* Adjust the container heights */
+  /* Adjust the container heights 
   div[style*="height: 70vh"], 
   div[style*="height: 100vh"] {
     height: auto !important;
     min-height: auto !important;
   }
-}
+}*/
+
 
 /* For very small screens (phones) */
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .container {
     flex-direction: column; /* Stack all columns */
     width: 100%;
@@ -224,6 +225,46 @@ img {
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
+
+
+
+  /* Remove sticky positioning on mobile */
+  .painting-text[style*="position: sticky"],
+  .painting-text[style*="top:"] {
+    position: relative !important;
+    top: auto !important;
+  }
+  
+  /* Adjust the container heights */
+  div[style*="height: 70vh"] {
+    height: auto !important;
+    min-height: auto !important;
+  }
+  
+  /* Add margin between stacked elements */
+  .painting-image {
+    margin-bottom: 20px !important;
+  }
+  
+  /* Ensure proper stacking order */
+  .painting-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .menu a {
+    font-size: 1rem;
+    padding: 5px;
+  }
+  
   
   /* Fix painting rows */
   .painting-row {
