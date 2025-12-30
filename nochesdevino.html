@@ -6,10 +6,12 @@
   <title>Pablo Ferros Portfolio - Wine Paintings</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Libre Baskerville', serif;
+      *font-family: Arial, sans-serif;
       color: white;
       background-color: #804242;
       display: flex;
@@ -91,6 +93,10 @@ img {
       letter-spacing: 0.5px;
     }
 
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
     h1 {
       font-size: 2rem;
       margin-bottom: 1rem;
@@ -165,11 +171,15 @@ img {
     }
 
     .painting-description {
-      font-size: 1.3rem;
+      font-size: 1.15rem;
       line-height: 1.5;
       color: white;
     }
 
+    .painting-description,
+    .exhibition-text {
+      line-height: 1.65;
+    }
 
 /* For narrow screens - stack vertically 
 @media (max-width: 1200px) { /* Adjust this breakpoint as needed 
@@ -514,7 +524,7 @@ img {
             <h3 class="painting-title">Danza de Fermentación</h3>
             <p class="painting-description">
                             Una representación metafórica del proceso de fermentación, donde los azúcares se transforman en alcohol.
-                            El diseño de cada pieza que compone esta colección ha pasado por fermentación al menos un año. Durante ese tiempo la idea se construyó, así que tuve semanas y meses para pensar en el contenido, antes de detallar los toques finales. La pintura superior muestra el borrador de la idea del vino, la inferior define el arte a través de la espera de que el sabor sea el correcto.
+                            El diseño de cada pieza que compone esta colección ha pasado por fermentación al menos un año. Durante ese tiempo la idea se construyó, así que tuve semanas y meses para pensar en el contenido, antes de detallar los toques finales.
             </p>
           </div>
         </div>
@@ -544,7 +554,7 @@ img {
                     <h3 class="painting-title">Añejando en Silencio</h3>
                     <p class="painting-description">
                         Representando barriles de vino en una bodega fresca, este trabajo explora el concepto de paciencia y maduración lenta.
-                        La textura de cada pintura es la misma, el significado viene de experiencias lejanas. El pasillo de mis abuelas, siempre oscuro y misterioso para mí. Uno de mis platos picantes favoritos, probando mapo tofu por primera vez. El retrato y dibujo de Federico García Lorca, el tiempo que leí *Introducción a la Muerte*. El canal coreano que siempre estará en mi corazón. Un sorbo caliente de glögg, una almendra. La ventana de las escaleras de mi antiguo apartamento. El ritmo triste, lento y cobarde de mis decisiones. El Mar Mediterráneo.
+                        La textura de cada pintura es la misma, el significado viene de experiencias lejanas. El pasillo de casa de mi abuela, siempre oscuro y misterioso para mí. Uno de mis platos picantes favoritos. El retrato y dibujo de Federico García Lorca, el tiempo que leí Introducción a la Muerte. El canal coreano que siempre estará en mi corazón. Un sorbo caliente de glögg, una almendra. La ventana de las escaleras de nuestro antiguo apartamento. El ritmo triste, lento y cobarde de mis decisiones. El Mar Mediterráneo.
                     </p>
                 </div>
             </div>
@@ -580,18 +590,112 @@ img {
                 <div class="painting-text" style="width: 100%;">
                     <h3 class="painting-title">Mi bodega</h3>
                     <p class="painting-description">
-                        Información sobre exposiciones.
-                        Abril 2027. Valladolid, España.
-                    </p>
+                        Exposición: Abril 2027. Valladolid, España
                 </div>
             </div>
 
+<div class="painting-row" style="align-items: flex-start;">
+  <div class="painting-image">
+    <img src="wine/4.JPG" class="active" id="image4" alt="Wine Painting 4">
+  </div>
+</div>
 
-        <div class="painting-row" style="align-items: flex-start;">
-          <div class="painting-image">
-          <img src="wine/4.JPG" class="active" id="image4" alt="Wine Painting 4">
-        </div>
-      </div>
+<div class="painting-row" style="margin-top: 30px;">
+  <div class="painting-text" style="width: 100%; max-width: 900px;">
+
+    <p class="painting-description">
+      <strong>Auroras borealis en Finlandia</strong><br>
+      Conduciendo desde el punto más al norte de Europa, la noche infinita hizo de nuestro viaje un momento de reflexión. A veces ese silencio trae una idea, un punto de inflexión. En este caso, fue un intenso baile verde que nunca olvidaré.
+    </p>
+
+    <p class="painting-description">
+      <strong>Cheonggyecheon y sus puentes</strong><br>
+      Muchos puentes, cada uno diferente al anterior; su diseño y arquitectura inspiran los tonos, formas y simetrías de mi mente. Sin embargo, dos mujeres se sentaron enfrente de mí y compartieron una larga conversación y un buen momento juntas, mientras el agua pasaba y nunca se detenía. Se sintió como un momento agridulce de la vida.
+    </p>
+
+    <p class="painting-description">
+      <strong>El último suspiro del alma</strong><br>
+      Acompasado o no, el último suspiro del alma, en la vida, en cada noche, en cada conversación. Una parte de nosotros se desvanece al cruzar esa frontera. Cuando dibujé los primeros bocetos para esta colección, lo sentí.
+    </p>
+
+    <p class="painting-description">
+      <strong>Payaso de rostro desdoblado, 1927</strong><br>
+      Siempre desglosado, duplicado, fusionado. Lorca dibujaba varias personas en una sola, en distintos ambientes y con emociones diferentes. Al margen de saber qué implicaba para él, veo un significado inmenso en lo que define para un adulto que camina por la vida, se levanta por la mañana, un día de diario, un fin de semana, en el trabajo, en la otra parte de la vida. Federico dibujó lo que ahora se aclama: Severance, el upside down, el muro de Juego de Tronos.
+    </p>
+
+    <p class="painting-description">
+      <strong>Pasillo oscuro</strong><br>
+      En el lugar donde fui más feliz, había varios miedos repartidos por la casa. Terrores, infiernos… ahora solo memoria y recuerdos. El pasillo que llevaba al cuarto con una pequeña despensa, al baño, a las habitaciones de mis tíos, un teléfono fijo sobre una mesilla con velas que nunca se encendían, un espejo grande en el que se aparecían entes ajenos.
+    </p>
+
+    <p class="painting-description">
+      <strong>Glögg</strong><br>
+      Y galletas de jengibre. Vino caliente con pasas y almendras. Lo que más me gusta de la Navidad en Suecia: vino que calienta el cuerpo en un lugar tan frío.
+    </p>
+
+    <p class="painting-description">
+      <strong>Vino para uno</strong><br>
+      Por favor.
+    </p>
+
+    <p class="painting-description">
+      <strong>La ventana del rellano</strong><br>
+      He visto pasar las estaciones, a los vecinos, las mudanzas, las nubes. Y a nosotros: nos vi pasar y no me percaté.
+    </p>
+
+    <p class="painting-description">
+      <strong>Una llama de esperanza</strong><br>
+      Que se consume y nos consume, un tiempo infinito que creo que nunca termina y, sin embargo, nos consume. Cierto, no terminará independientemente de nuestro ser y aspecto físico, y seguirá pasando, como las pirámides.
+    </p>
+
+    <p class="painting-description">
+      <strong>Lo que no vemos</strong><br>
+      De vuelta en ese universo paralelo dentro de una misma persona, esta vez pienso en la tristeza, las lágrimas, los pensamientos que nunca veo, pero que sé que están. O peor aún, que no lo están.
+    </p>
+
+    <p class="painting-description">
+      <strong>Federico</strong><br>
+      El motivo de esta colección. Su vida, su muerte, su motivo para crear, sus palabras escritas.
+    </p>
+
+    <p class="painting-description">
+      <strong>Ribera</strong><br>
+      Una cultura de vivir el verano bajo la parra, de esas pequeñas ramillas que buscan sostener la rama a lo que esté cerca, seguir creciendo bajo un ambiente tosco y seco. Las mismas sillas de plástico de terraza que Bad Bunny presenta para tirar más fotos, para el patio de casa o para pasar las noches tórridas en la calle.
+    </p>
+
+    <p class="painting-description">
+      <strong>Langhe Nebbiolo Enzo Bartoli</strong><br>
+      La botella de enero de 2024 que te regalaron, que inspiró el material, el tinte y el pigmento de estos dibujos.
+    </p>
+
+    <p class="painting-description">
+      <strong>El mar Mediterráneo</strong><br>
+      Interpretación abierta para ti que estás leyendo esto.
+    </p>
+
+    <p class="painting-description">
+      <strong>Mapo Tofu</strong><br>
+      Añado de menos el picante que aparentemente no tenía, y que después me hacía sudar y sobrehidratarme.
+    </p>
+
+    <p class="painting-description">
+      <strong>Ramo de amapolas</strong><br>
+      Hay dos tipos: aquellas que crecen en las esquinas y entre el hormigón de la calle. Estas, en cambio, son las que pueblan los campos de cultivo; miles y miles de flores que transforman el valle en un intenso rojo mágico.
+    </p>
+
+    <p class="painting-description">
+      <strong>Amapola en el corazón</strong><br>
+      Aquella que crece sola junto a una alcantarilla y que, sin embargo, esconde una historia intensa, muchas veces denostada.
+    </p>
+
+    <p class="painting-description">
+      <strong>Campo castellano</strong><br>
+      Como el tiempo y la vida, el oro temporal se va cada otoño. La virtud de entender el precio del poder, de la ambición y de lo minúsculos que somos. El ahora es ahora, que diría el señor Hirayama.
+    </p>
+
+  </div>
+</div>
+
 
     </div>
   </div>
