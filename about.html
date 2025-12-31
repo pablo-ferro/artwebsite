@@ -16,7 +16,10 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pablo Ferros Portfolio - About</title>
+    <title>About | Contact | Watercolor & Digital Art Pablo Ferros</title>
+
+    <meta name="description" content="Meet Pablo Ferros, Spanish artist based in Stockholm. Background, inspirations, creative process, and artistic philosophy. Specializing in digital techniques and traditional watercolor.">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
@@ -31,6 +34,30 @@
         .container {
             display: flex;
             width: 100%;
+        }
+
+        .email-copy {
+            color: #0066cc;
+            text-decoration: underline;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .email-copy:hover {
+            color: #004499;
+            background-color: #f0f8ff;
+        }
+
+        .email-copy:active {
+            color: #002266;
+            background-color: #e6f2ff;
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+            font-style: italic;
         }
 
         .left-column {
@@ -301,6 +328,12 @@
     <div class="item">- A comedian: Chiquito de la Calzada</div>
     <div class="item">- A performer: Benedict Cumberbatch</div>
     <div class="item">- A finale: drifting, cloud of smoke, wild, wrecked.</div>
+    <div class="contact-info">Available for commissions: 
+    <span class="email-copy" 
+          onclick="navigator.clipboard.writeText('pablofer.reque@gmail.com')"
+          title="Click to copy email">
+        pablofer.reque@gmail.com
+    </span>
 </div>
             </div>
 
