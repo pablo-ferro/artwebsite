@@ -797,6 +797,48 @@ function updateDots(scrollPercent) {
 
 
 
+    /* ===========================
+       GOOGLE ANALYTICS EVENTS
+       =========================== */
+
+    /* ---- Scroll depth tracking ---- */
+    let scrollTracked = {
+      25: false,
+      50: false,
+      75: false,
+      100: false
+    };
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+      [25, 50, 75, 100].forEach(point => {
+        if (scrollPercent >= point && !scrollTracked[point]) {
+          gtag('event', 'scroll_depth', {
+            event_category: 'Scroll',
+            event_label: point + '%',
+            value: point
+          });
+          scrollTracked[point] = true;
+        }
+      });
+    });
+
+    /* ---- External link tracking ---- */
+    document.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (link.hostname && link.hostname !== window.location.hostname) {
+          gtag('event', 'external_link_click', {
+            event_category: 'Outbound',
+            event_label: link.href
+          });
+        }
+      });
+    });
+
+
   </script>
 </body>
 </html>
