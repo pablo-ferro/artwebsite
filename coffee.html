@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZS079TDXTE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZS079TDXTE');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Coffee Paintings Exhibition | Double Espresso To Go | Pablo Ferros</title>
+  <meta name="description" content="Coffee-based painting exhibition exploring caffeine, routine, stains, cafés and daily rituals through watercolor and coffee pigment.">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Libre Baskerville', serif;
+      color: #2b2b2b;
+      background-color: #f6f1eb;
+      display: flex;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    * {
+      box-sizing: border-box;
+      max-width: 100%;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+    }
+
+    /* LEFT COLUMN — UNCHANGED */
+    .left-column {
+      width: 11%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: relative;
+    }
+
+    /* RIGHT COLUMN */
+    .right-column {
+      width: 81%;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Courier Prime', monospace;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .exhibition-title {
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+    }
+
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      padding: 5px 0;
+      transition: color 0.3s;
+    }
+
+
+    .menu a,
+    .social a {
+      color: #2b2b2b;
+      text-decoration: none;
+    }
+
+    .menu a:hover,
+    .social a:hover {
+      opacity: 0.6;
+    }
+
+    /* IMAGE CONTROL */
+    .art-image {
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+      border: 3px solid #000;
+      border-radius: 4px;
+      display: block;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+
+    .painting-row {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      align-items: flex-start;
+    }
+
+    .painting-text {
+      flex: 2;
+    }
+
+
+/* Default for all screens (mobile included) */
+.painting-text {
+  position: relative; /* safe default */
+  top: auto;
+}
+
+/* Sticky only for screens wider than 700px */
+@media (min-width: 701px) {
+  .painting-text.sticky {
+    position: sticky;
+    top: 100px;
+  }
+}
+
+
+    .painting-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .painting-title {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    .painting-description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .exhibition-text {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      max-width: 1000px;
+    }
+
+    /* GALLERY */
+    .image-gallery-4 {
+      display: flex;
+      gap: 20px;
+      margin: 40px 0;
+      justify-content: flex-start;
+    }
+
+    .image-gallery-4 img {
+      max-width: 240px;
+      width: 100%;
+      border: 3px solid #000;
+      border-radius: 4px;
+      object-fit: contain;
+    }
+
+    .hero-row {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.hero-image {
+  flex: 0 0 auto;
+}
+
+.hero-hours {
+  flex: 1;
+  font-family: 'Courier Prime', monospace;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.hero-hours h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+    @media (max-width: 700px) {
+      .container {
+        flex-direction: column;
+      }
+
+  .left-column,
+  .right-column {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box; /* Include padding in width */
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  
+
+  .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .menu a {
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+      .exhibition-title {
+        font-size: 2.2rem;
+      }
+
+      .image-gallery-4 {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .image-gallery-4 img {
+        max-width: 260px;
+      }
+
+      .hero-row {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-hours {
+  margin-top: 20px;
+}
+
+  /* Stack painting rows */
+  .painting-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Make text non-sticky and properly positioned */
+  .painting-text {
+    position: relative !important; /* override sticky */
+    top: auto !important;
+    width: 100%;
+  }
+
+  /* Ensure images behave */
+  .painting-image {
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Fix image sizing */
+  .art-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Add spacing between stacked texts */
+  .painting-text + .painting-text {
+    margin-top: 20px;
+  }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- LEFT COLUMN -->
+    <div class="left-column">
+      <h1>pablo ferros</h1>
+
+      <div class="menu">
+        <a href="index.html">home</a>
+        <a href="wine.html">wine</a>
+        <a href="digital.html">digital</a>
+        <a href="illustrations.html">illustrations</a>
+        <a href="drawings.html">drawings</a>
+        <a href="about.html">about</a>
+      </div>
+
+      <div class="social">
+        <a href="https://instagram.com/studioferros" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:pablofer.reque@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="right-column">
+
+      <div class="hero-row">
+        <div class="hero-image">
+          <img src="bur.JPG" alt="Coffee Painting Exhibition" class="art-image">
+        </div>
+
+        <div class="hero-hours">
+          <h3>Coffee Hours</h3>
+          <p>
+            Mon – Fri<br>
+            8:00 – 18:00
+          </p>
+          <p>
+            Sat – Sun<br>
+            10:00 – 17:00
+          </p>
+
+          <p>
+            Everyday open at midnight<br>
+            Jazz ghost band jam.
+          </p>
+        </div>
+      </div>
+
+
+
+        
+      <div class="exhibition-intro">
+        <h2 class="exhibition-title">double espresso to go</h2>
+        <p class="exhibition-text">
+          A series of paintings made with coffee, caffeine stains and that smell that feels like home.  <br> This collection is about gratitude and love. And flowers.
+        </p>
+      </div>
+
+
+        <div class="hero-image">
+          <img src="arg.JPG" alt="Coffee Painting Exhibition" class="art-image">
+        </div>
+
+
+
+
+      <div>
+        <div class="painting-row" style="margin-top: 40px;">
+          <div class="painting-image">
+            <img src="coffee2.jpg" alt="Coffee Painting" class="art-image">
+          </div>
+          <div class="painting-text">
+            <h3 class="painting-title">I will pay both:</h3>
+            <p class="painting-description">
+              To those surrounded by flowers, to my joy and the rest too, alive, I painted you with a huge respect, slow songs and memory for what you did. You saved my life, looked after me, hold my hand, my hopes, my heart. You treated with an infinite patience. I picked the flowers for you, you taught me to gift flowers, always. To carry my regrets and feeligns forever as a sign of rooting in reality, to blossom regardless of the fact that the water needed came from my own tears. <br>
+              I owe you my life, since you saved it.
+            </p>
+          </div>
+        </div>
+      </div>
+
+     
+      <div class="painting-row">
+        
+        <div class="painting-text">
+          <h3 class="painting-title">The last sip</h3>
+          <p class="painting-description">
+            I thank those that shared time with me, in the same table, under the same light and music. I promise I always looked at your eyes when you were talking, and sometimes I found your soul.
+          </p>
+        </div>
+        <div class="painting-image">
+            <img src="coffee1.jpg" alt="Coffee Painting" class="art-image">
+          </div>
+      </div>
+
+       <div class="image-gallery-4">
+        <img src="coffee4.jpg" alt="">
+        <img src="coffee5.jpg" alt="">
+        <img src="coffee6.jpg" alt="">
+        <img src="coffee7.jpg" alt="">
+      </div>
+
+
+    </div>
+  </div>
+</body>
+</html>

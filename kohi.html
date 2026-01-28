@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZS079TDXTE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZS079TDXTE');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>コーヒー絵画展 | ダブルエスプレッソ・トゥゴー | Pablo Ferros</title>
+  <meta name="description" content="Coffee-based painting exhibition exploring caffeine, routine, stains, cafés and daily rituals through watercolor and coffee pigment.">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Libre Baskerville', serif;
+      color: #2b2b2b;
+      background-color: #f6f1eb;
+      display: flex;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    * {
+      box-sizing: border-box;
+      max-width: 100%;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+    }
+
+    /* LEFT COLUMN — UNCHANGED */
+    .left-column {
+      width: 11%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: relative;
+    }
+
+    /* RIGHT COLUMN */
+    .right-column {
+      width: 81%;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Courier Prime', monospace;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .exhibition-title {
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+    }
+
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      padding: 5px 0;
+      transition: color 0.3s;
+    }
+
+
+    .menu a,
+    .social a {
+      color: #2b2b2b;
+      text-decoration: none;
+    }
+
+    .menu a:hover,
+    .social a:hover {
+      opacity: 0.6;
+    }
+
+    /* IMAGE CONTROL */
+    .art-image {
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+      border: 3px solid #000;
+      border-radius: 4px;
+      display: block;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+
+    .painting-row {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      align-items: flex-start;
+    }
+
+    .painting-text {
+      flex: 2;
+    }
+
+
+/* Default for all screens (mobile included) */
+.painting-text {
+  position: relative; /* safe default */
+  top: auto;
+}
+
+/* Sticky only for screens wider than 700px */
+@media (min-width: 701px) {
+  .painting-text.sticky {
+    position: sticky;
+    top: 100px;
+  }
+}
+
+
+    .painting-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .painting-title {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    .painting-description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .exhibition-text {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      max-width: 1000px;
+    }
+
+    /* GALLERY */
+    .image-gallery-4 {
+      display: flex;
+      gap: 20px;
+      margin: 40px 0;
+      justify-content: flex-start;
+    }
+
+    .image-gallery-4 img {
+      max-width: 240px;
+      width: 100%;
+      border: 3px solid #000;
+      border-radius: 4px;
+      object-fit: contain;
+    }
+
+    .hero-row {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.hero-image {
+  flex: 0 0 auto;
+}
+
+.hero-hours {
+  flex: 1;
+  font-family: 'Courier Prime', monospace;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.hero-hours h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+    @media (max-width: 700px) {
+      .container {
+        flex-direction: column;
+      }
+
+  .left-column,
+  .right-column {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box; /* Include padding in width */
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  
+
+  .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .menu a {
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+      .exhibition-title {
+        font-size: 2.2rem;
+      }
+
+      .image-gallery-4 {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .image-gallery-4 img {
+        max-width: 260px;
+      }
+
+      .hero-row {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-hours {
+  margin-top: 20px;
+}
+
+  /* Stack painting rows */
+  .painting-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Make text non-sticky and properly positioned */
+  .painting-text {
+    position: relative !important; /* override sticky */
+    top: auto !important;
+    width: 100%;
+  }
+
+  /* Ensure images behave */
+  .painting-image {
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Fix image sizing */
+  .art-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Add spacing between stacked texts */
+  .painting-text + .painting-text {
+    margin-top: 20px;
+  }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- LEFT COLUMN -->
+    <div class="left-column">
+      <h1>pablo ferros</h1>
+
+      <div class="menu">
+        <a href="index.html">ホーム</a>
+        <a href="wain.html">ワイン</a>
+        <a href="digital.html">デジタル</a>
+        <a href="illustrations.html">イラストレーション</a>
+        <a href="drawings.html">ドローイング</a>
+        <a href="about.html">アバウト</a>
+      </div>
+
+      <div class="social">
+        <a href="https://instagram.com/studioferros" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:pablofer.reque@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="right-column">
+
+      <div class="hero-row">
+        <div class="hero-image">
+          <img src="bur.JPG" alt="コーヒー絵画展" class="art-image">
+        </div>
+
+        <div class="hero-hours">
+          <h3>コーヒー営業時間</h3>
+          <p>
+            月 – 金<br>
+            8:00 – 18:00
+          </p>
+          <p>
+            土 – 日<br>
+            10:00 – 17:00
+          </p>
+
+          <p>
+            毎日深夜オープン<br>
+            ジャズゴーストバンドジャム
+          </p>
+        </div>
+      </div>
+
+
+
+        
+      <div class="exhibition-intro">
+        <h2 class="exhibition-title">ダブルエスプレッソ・トゥゴー</h2>
+        <p class="exhibition-text">
+          コーヒー、カフェインの染み、そして家のような香りで描かれた一連の絵画です。<br>
+          このコレクションは感謝と愛、そして花についてです。
+        </p>
+      </div>
+
+
+        <div class="hero-image">
+          <img src="arg.JPG" alt="コーヒー絵画展" class="art-image">
+        </div>
+
+
+
+
+      <div>
+        <div class="painting-row" style="margin-top: 40px;">
+          <div class="painting-image">
+            <img src="coffee2.jpg" alt="コーヒー絵画" class="art-image">
+          </div>
+          <div class="painting-text">
+            <h3 class="painting-title">両方に感謝を:</h3>
+            <p class="painting-description">
+              花に囲まれた皆さん、私の喜び、そして他の全ての人々へ。生きているあなたたちを、私は大きな尊敬、ゆっくりとした歌、そしてあなたがしたことへの記憶で描きました。あなたは私の命を救い、世話をし、私の手、希望、心を握ってくれました。無限の忍耐で接してくれました。私はあなたのために花を摘み、あなたは花を贈ることを教えてくれました、いつも。後悔や感情を永遠に抱え、現実に根付く証として、必要な水が自分の涙から来たとしても咲くように。<br>
+              あなたが救ってくれたので、私は命をあなたに負っています。
+            </p>
+          </div>
+        </div>
+      </div>
+
+     
+      <div class="painting-row">
+        
+        <div class="painting-text">
+          <h3 class="painting-title">最後の一口</h3>
+          <p class="painting-description">
+            同じテーブル、同じ光と音楽の下で時間を共有してくれた皆さんに感謝します。あなたが話しているとき、私は常にあなたの目を見ていました、そして時々あなたの魂を見つけました。
+          </p>
+
+        </div>
+        <div class="painting-image">
+            <img src="coffee1.jpg" alt="Coffee Painting" class="art-image">
+          </div>
+      </div>
+
+       <div class="image-gallery-4">
+        <img src="coffee4.jpg" alt="">
+        <img src="coffee5.jpg" alt="">
+        <img src="coffee6.jpg" alt="">
+        <img src="coffee7.jpg" alt="">
+      </div>
+
+
+    </div>
+  </div>
+</body>
+</html>
